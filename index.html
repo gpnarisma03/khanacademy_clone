@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khan Clone Navbar</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="header-container mt-0">
+        <nav class="main-nav">
+          <div class="nav-content" id="navbarWrapper">
+            <!-- Left: Explore + Search -->
+            <div class="nav-left">
+              <!-- Explore Dropdown -->
+              <div class="dropdown">
+                <button
+                  class="btn btn-sm btn-outline-secondary dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="true"
+                >
+                  Explore
+                </button>
+                <ul class="dropdown-menu custom-dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Math</a></li>
+                  <li><a class="dropdown-item" href="#">Science</a></li>
+                </ul>
+              </div>
+
+              <!-- Search Box -->
+              <div class="search-box" id="searchTrigger">
+                <i class="bi bi-search"></i>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="Search"
+                  readonly
+                />
+              </div>
+            </div>
+
+            <!-- Center: Brand -->
+            <div class="brand d-flex justify-content-center align-items-center">
+              <div class="brand-logo">
+                <img
+                  src="./assets/images/logo.png"
+                  alt="Khan Academy logo"
+                  class="logo"
+                />
+              </div>
+              <span class="brand-name">Khan Academy</span>
+            </div>
+
+            <!-- Right: CTA Buttons -->
+            <div class="nav-right">
+              <a
+                href="https://donate.khanacademy.org"
+                target="_blank"
+                class="btn-donate"
+              >
+                Donate <i class="bi bi-box-arrow-up-right"></i>
+              </a>
+              <button class="btn-login">Log in</button>
+              <button class="btn-signup">Sign Up</button>
+            </div>
+          </div>
+
+          <!-- Expanded Search (hidden by default) -->
+          <div class="expanded-search" id="expandedSearch">
+            <button id="closeSearch" class="btn btn-link text-decoration-none">
+              <i class="bi bi-x-lg"></i>
+            </button>
+            <div class="search-wrapper">
+              <i class="bi bi-search"></i>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Search for courses, skills and videos"
+              />
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <!-- Left Column: Image -->
+        <div class="hero-image">
+          <img
+            src="./assets/images/hero_student_collage_US_1x.png"
+            alt="Students Collage"
+          />
+        </div>
+
+        <!-- Right Column: Text Content -->
+        <div class="hero-text">
+          <!-- Heading -->
+          <div class="hero-heading">
+            <h1>
+              For every student,<br />
+              every classroom.<br />
+              <span class="highlight">Real results.</span>
+            </h1>
+          </div>
+
+          <!-- Description -->
+          <div class="hero-description">
+            <p>
+              We’re a nonprofit with the mission to provide a free, world-class
+              education for anyone, anywhere.
+            </p>
+          </div>
+
+          <!-- Buttons -->
+          <div class="hero-buttons">
+            <button class="btn-hero">Learners</button>
+            <button class="btn-hero">Teachers</button>
+            <button class="btn-hero">Parents</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="courses-section">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Left Column -->
+          <div class="col-md-6">
+            <div class="accordion" id="accordionLeft">
+              <!-- Math Accordion Item -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingMath">
+                  <button
+                    class="accordion-button d-flex justify-content-between"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseMath"
+                    aria-expanded="true"
+                    aria-controls="collapseMath"
+                  >
+                    <span
+                      ><img
+                        class="course-img"
+                        src="./assets/icons/math.png-444b34-128c.png"
+                        alt="Math Icon"
+                      />Math: US Grades</span
+                    >
+                  </button>
+                </h2>
+                <div
+                  id="collapseMath"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingMath"
+                  data-bs-parent="#accordionLeft"
+                >
+                  <div class="accordion-body">
+                    <div class="row">
+                      <!-- Column 1 -->
+                      <div class="col-md-6">
+                        <ul class="list-unstyled mb-0">
+                          <li>
+                            <a href="#">Pre-K through grade 2 (Khan Kids)</a>
+                          </li>
+                          <li><a href="#">Early math review</a></li>
+                          <li><a href="#">2nd grade</a></li>
+                          <li><a href="#">3rd grade</a></li>
+                          <li><a href="#">4th grade</a></li>
+                        </ul>
+                      </div>
+
+                      <!-- Column 2 -->
+                      <div class="col-md-6">
+                        <ul class="list-unstyled mb-0">
+                          <li><a href="#">5th grade</a></li>
+                          <li><a href="#">6th grade</a></li>
+                          <li><a href="#">7th grade</a></li>
+                          <li><a href="#">8th grade</a></li>
+                          <li>
+                            <a href="#" class="fw-bold">See Pre-K - 8th Math</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="col-md-6">
+            <div class="accordion" id="accordionRight">
+              <!-- Science Accordion Item -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingScience">
+                  <button
+                    class="accordion-button collapsed d-flex justify-content-between"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseScience"
+                    aria-expanded="false"
+                    aria-controls="collapseScience"
+                  >
+                    <span
+                      ><img
+                        class="course-img"
+                        src="./assets/icons/economics_finance.png-55daed-128c.png"
+                        alt="Math Icon"
+                      />
+                      Economics</span
+                    >
+                  </button>
+                </h2>
+                <div
+                  id="collapseScience"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingScience"
+                  data-bs-parent="#accordionRight"
+                >
+                  <div class="accordion-body">
+                    <div class="row">
+                      <!-- Column 1 -->
+                      <div class="col-md-6">
+                        <ul class="list-unstyled mb-0">
+                          <li><a href="#">Macroeconomics</a></li>
+                          <li><a href="#">AP®︎/College Macroeconomics</a></li>
+                          <li><a href="#">Microeconomics</a></li>
+                        </ul>
+                      </div>
+
+                      <!-- Column 2 -->
+                      <div class="col-md-6">
+                        <ul class="list-unstyled mb-0">
+                          <li><a href="#">AP®︎/College Microeconomics</a></li>
+                          <li>
+                            <a href="#" class="fw-bold">See all Economics</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const searchTrigger = document.getElementById("searchTrigger");
+      const navbarWrapper = document.getElementById("navbarWrapper");
+      const expandedSearch = document.getElementById("expandedSearch");
+      const closeSearch = document.getElementById("closeSearch");
+
+      searchTrigger.addEventListener("click", () => {
+        navbarWrapper.style.display = "none";
+        expandedSearch.classList.add("show");
+        expandedSearch.querySelector("input").focus();
+      });
+
+      closeSearch.addEventListener("click", () => {
+        expandedSearch.classList.remove("show");
+        navbarWrapper.style.display = "flex";
+      });
+    </script>
+  </body>
+</html>
