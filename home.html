@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khan Clone Navbar</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/index.css" rel="stylesheet" />
+    <style></style>
+  </head>
+  <body>
+    <div class="nav-border">
+      <div class="top-container mt-0">
+        <nav class="navbar">
+          <div class="navbar-wrapper" id="navbarWrapper">
+            <!-- Left: Explore + Search -->
+            <div class="nav-section">
+              <!-- Explore Dropdown -->
+              <div class="dropdown">
+                <button
+                  class="btn btn-sm btn-outline-secondary dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="true"
+                >
+                  Explore
+                </button>
+                <ul class="dropdown-menu custom-dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Math</a></li>
+                  <li><a class="dropdown-item" href="#">Science</a></li>
+                </ul>
+              </div>
+
+              <!-- Search Box -->
+              <div class="search-box" id="searchTrigger">
+                <i class="bi bi-search"></i>
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  placeholder="Search"
+                  readonly
+                />
+              </div>
+            </div>
+
+            <!-- Center: Logo -->
+
+            <div class="brand d-flex justify-content-center align-items-center">
+              <div class="khanacademy-logo-container">
+                <img
+                  src="./assets/images/logo.png"
+                  alt="khanacademy logo"
+                  class="logo"
+                />
+              </div>
+              Khan Academy
+            </div>
+
+            <!-- Right: Donate, Login, Sign Up -->
+            <div class="nav-section">
+              <a
+                class="btn btn-sm btn-outline-success"
+                href="https://donate.khanacademy.org"
+                target="_blank"
+              >
+                Donate <i class="bi bi-box-arrow-up-right"></i>
+              </a>
+              <button class="btn btn-sm btn-outline-primary">Log in</button>
+              <button class="btn btn-sm btn-primary">Sign Up</button>
+            </div>
+          </div>
+          <!-- EXPANDED SEARCH BAR (hidden by default) -->
+          <div class="expanded-search" id="expandedSearch">
+            <button id="closeSearch" class="btn btn-link text-decoration-none">
+              <i class="bi bi-x-lg"></i>
+            </button>
+            <div class="search-wrapper">
+              <i class="bi bi-search"></i>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Search for courses, skills and videos"
+              />
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const searchTrigger = document.getElementById("searchTrigger");
+      const navbarWrapper = document.getElementById("navbarWrapper");
+      const expandedSearch = document.getElementById("expandedSearch");
+      const closeSearch = document.getElementById("closeSearch");
+
+      searchTrigger.addEventListener("click", () => {
+        navbarWrapper.style.display = "none"; // Hide navbar wrapper
+        expandedSearch.classList.add("show"); // Show expanded search
+        expandedSearch.querySelector("input").focus();
+      });
+
+      closeSearch.addEventListener("click", () => {
+        expandedSearch.classList.remove("show");
+        navbarWrapper.style.display = "flex"; // Restore navbar wrapper
+      });
+    </script>
+  </body>
+</html>
